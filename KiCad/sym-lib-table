@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name STM32-Evalboard)(type Legacy)(uri ${KIPRJMOD}/Libraries/STM32-Evalboard.lib)(options "")(descr ""))
+)

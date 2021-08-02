@@ -1,0 +1,73 @@
+Flashing BluePill over UART:
+----------------------------
+
+- Install empty sketch on Arduino Nano
+- Connect Arduino TX -> PA9 (TX)
+- Connect Arduino RX -> PA10 (RX)
+- Connect power and ground
+- Set BOOT0 to 1 (High) and BOOT1 to 0 (Low)
+- Reset BluePill (Bootloader)
+- Open Flash Loader Demonstrator
+- Set Baud Rate to highest, Timeout to lowest
+- Connect to MCU and flash firmware
+- Reset after failed attempt
+
+Troubleshooting:
+- Check BluePill for sufficient voltage and good ground connection
+- On breadboards it can take many attempts due to bad contacts
+- Set Flash Loader to low Baud Rate to see RX-LED briefly light up
+- Try connecting Arduino RST to ground
+
+
+Converting BluePill to ST-Link V2:
+----------------------------------
+
+- Prepare firmware flash over UART
+- Flash ST-Link V2 firmware (STLinkV2.J16.S4.bin) to BluePill
+- Disonnect and reset BluePill
+- Connect BluePill over USB
+- Open ST-Link firmware update in ST-Link Utility
+- BluePill shows up as STM32+STM8 Debugger, V2.J16.S4
+- Confirm Update to e.g. V2.J34.S7
+- BluePill now shows up as STM32+STM8 Debugger, V2.J34.S7
+- For use as ST-Link a resistor is needed between PB12 and PB14 
+
+
+Flashing ST-Link V2.1 on STM32F103CB MCU:
+-----------------------------------------
+
+- This procedure only works with ST-Link Utility v4.3
+- Prepare firmware flash over UART or SWD
+- Flash ST-Link V2.1 bootloader (Bootloader-2-1-Protected.bin)
+- Connect Device over USB
+- Open ST-Link firmware update in ST-Link Utility
+- Confirm Update to e.g. STM32+MSD+VCP
+- Update for annoyiign warnings
+
+
+Flashing ST-Link V2.1 on STM32F103C8 MCU:
+-----------------------------------------
+
+- Same as above but flash limited to 64K
+- Therefore Product Option STM32+MSD+VCP is not available
+
+
+Converting BluePill to ST-Link V2:
+----------------------------------
+
+- Same as above but requires manual enumeration
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

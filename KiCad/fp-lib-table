@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name STM32-Evalboard)(type KiCad)(uri ${KIPRJMOD}/Libraries/STM32-Evalboard.pretty)(options "")(descr ""))
+)

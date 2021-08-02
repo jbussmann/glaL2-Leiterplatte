@@ -1,0 +1,8 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP R_2Axis
+K resistor variable
+F ~
+$ENDCMP
+#
+#End Doc Library
